@@ -12,15 +12,15 @@ import java.util.function.Supplier;
  */
 @Slf4j
 @Component
-public class AppCreatedSupplier implements Supplier<AppModel> {
+public class AppUpdatedSupplier implements Supplier<AppModel> {
 
     @Override
     public AppModel get() {
-        log.info("App criado com sucesso");
+        log.info("App Atualizado com sucesso");
         return AppModel.builder()
                 .id(UUID.randomUUID())
-                .name("Dlima Solutions")
-                .address("http://www.dlima.com.br")
+                .name("Dpaula")
+                .address("http://www.dpaula.com.br")
                 .build();
     }
 }
