@@ -23,6 +23,3 @@ spring:
           destination: app.v1.event.app-created # Nome do tópico que será criado no RabbitMQ, para que os consumidores possam se inscrever, e receber as mensagens
         appUpdatedSupplier-out-0:
           destination: app.v1.event.app-updated
-    # como temos dois canais de saída do mesmo tipo, é necessário criar um bean para cada um, para que o Spring Cloud Stream consiga diferenciá-los
-    function:
-      definition: appCreatedSupplier;appUpdatedSupplier

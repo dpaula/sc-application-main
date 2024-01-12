@@ -4,8 +4,8 @@ import lombok.*;
 
 import java.util.UUID;
 
-@Builder
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 public class AppModel {
