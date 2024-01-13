@@ -24,7 +24,7 @@ public class AppEventGatewayWithStreamBridge implements AppEventGateway {
 
     @Override
     public void sendAppCreatedEvent(App app) {
-        log.info("App criado " + app.getId());
+        log.info("App (criado) Enviando mensagem " + app.getId());
 
         final var appModel = mapper.map(app, AppModel.class);
         streamBridge.send(appProperties.getAppCreatedChannel(), appModel);
@@ -32,7 +32,7 @@ public class AppEventGatewayWithStreamBridge implements AppEventGateway {
 
     @Override
     public void sendAppUpdatedEvent(App app) {
-        log.info("App atualizado " + app.getId());
+        log.info("App (atualizado) enviando mensagem " + app.getId());
 
         final var appModel = mapper.map(app, AppModel.class);
         streamBridge.send(appProperties.getAppUpdatedChannel(), appModel);
